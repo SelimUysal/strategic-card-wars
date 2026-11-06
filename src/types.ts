@@ -29,3 +29,23 @@ export interface MapDef { id: MapId; nameTr: string; themeTr: string; battleStyl
 export interface FactionDef { id: FactionId; nameTr: string; colorHex: string; }
 export interface MatchConfig { mapId: MapId; difficultyId: DifficultyId; playerCommanderId: CommanderId | null; playerFactionId: FactionId; enemyFactionId: FactionId; enemyCommanderId: CommanderId | null; seed: number; }
 export interface MatchStats { enemySoldiersKilled: number; friendlySoldiersLost: number; enemyBuildingsDestroyed: number; goldGathered: number; woodGathered: number; soldiersProduced: number; survivalTimeSec: number; battleScore: number; accountGoldEarned: number; }
+
+export interface MatchHistoryEntry {
+  dateIso: string;
+  mapId: MapId;
+  difficultyId: DifficultyId;
+  result: 'win' | 'loss' | 'draw' | 'exit';
+  durationRealSec: number;
+  battleScore: number;
+  accountGoldDelta: number;
+}
+
+export interface Profile {
+  accountGold: number;
+  unlockedCards: CardId[];
+  unlockedCommanders: CommanderId[];
+  deck: CardId[];
+  survivalRecords: Partial<Record<MapId, number>>;
+  history: MatchHistoryEntry[];
+}
+
