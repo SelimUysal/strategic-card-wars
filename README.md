@@ -9,17 +9,5 @@ Tarayıcıda çalışan, 3D, kart tabanlı gerçek zamanlı bir strateji oyunu; 
 - Vite
 - HTML5 & CSS3
 
-## Çalıştırma
-```bash
-npm install
-npm run dev
-```
-
-## Yayın
-GitHub'da Settings > Pages > Source: GitHub Actions seçilir; main dalına push ile yayınlanır.
-
-## Görseller ve Lisans
-3D modeller basit geometrilerle kodla üretilir; harici model veya ses dosyası kullanılmaz.
-
 ## Canlı Oyun
 Bağlantı: yayından sonra eklenecek
