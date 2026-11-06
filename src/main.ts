@@ -1,4 +1,5 @@
 import './styles/main.css';
+import { Game } from './core/Game';
 
 const app = document.getElementById('app');
 if (app) {
@@ -7,4 +8,7 @@ if (app) {
   canvas.style.height = '100%';
   canvas.style.display = 'block';
   app.appendChild(canvas);
+
+  const game = new Game(canvas);
+  game.start();
 }
